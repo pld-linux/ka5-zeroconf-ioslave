@@ -1,23 +1,24 @@
-%define		kdeappsver	18.12.1
+%define		kdeappsver	19.04.1
+%define		kframever	5.56.0
 %define		qtver		5.9.0
 %define		kaname		zeroconf-ioslave
 Summary:	zeroconf ioslave
 Summary(pl.UTF-8):	zeroconf ioslave
 Name:		ka5-%{kaname}
-Version:	18.12.1
+Version:	19.04.1
 Release:	1
 License:	GPL v2+
 Group:		X11/Libraries
 Source0:	http://download.kde.org/stable/applications/%{kdeappsver}/src/%{kaname}-%{version}.tar.xz
-# Source0-md5:	41d470c2e5555191086efea24ecd4d1f
+# Source0-md5:	1293682d80aacba090e61b74e88a4745
 URL:		http://www.kde.org/
 BuildRequires:	Qt5Core-devel
 BuildRequires:	gettext-devel
-BuildRequires:	kf5-extra-cmake-modules >= 5.37.0
-BuildRequires:	kf5-kdbusaddons-devel >= 5.37.0
-BuildRequires:	kf5-kdnssd-devel >= 5.37.0
-BuildRequires:	kf5-ki18n-devel >= 5.37.0
-BuildRequires:	kf5-kio-devel >= 5.37.0
+BuildRequires:	kf5-extra-cmake-modules >= %{kframever}
+BuildRequires:	kf5-kdbusaddons-devel >= %{kframever}
+BuildRequires:	kf5-kdnssd-devel >= %{kframever}
+BuildRequires:	kf5-ki18n-devel >= %{kframever}
+BuildRequires:	kf5-kio-devel >= %{kframever}
 BuildRequires:	ninja
 BuildRequires:	qt5-build >= 5.9.0
 BuildRequires:	rpmbuild(macros) >= 1.164
@@ -34,6 +35,7 @@ install -d build
 cd build
 %cmake \
 	-G Ninja \
+	-DHTML_INSTALL_DIR=%{_kdedocdir} \
 	-DKDE_INSTALL_USE_QT_SYS_PATHS=ON \
 	..
 %ninja_build
