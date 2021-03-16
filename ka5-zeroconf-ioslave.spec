@@ -1,16 +1,16 @@
-%define		kdeappsver	19.04.1
+%define		kdeappsver	20.12.3
 %define		kframever	5.56.0
 %define		qtver		5.9.0
 %define		kaname		zeroconf-ioslave
 Summary:	zeroconf ioslave
 Summary(pl.UTF-8):	zeroconf ioslave
 Name:		ka5-%{kaname}
-Version:	19.04.1
+Version:	20.12.3
 Release:	1
 License:	GPL v2+
 Group:		X11/Libraries
-Source0:	http://download.kde.org/stable/applications/%{kdeappsver}/src/%{kaname}-%{version}.tar.xz
-# Source0-md5:	1293682d80aacba090e61b74e88a4745
+Source0:	http://download.kde.org/stable/release-service/%{kdeappsver}/src/%{kaname}-%{version}.tar.xz
+# Source0-md5:	a48a0c9154e362ec6017ae3e6b3005d2
 URL:		http://www.kde.org/
 BuildRequires:	Qt5Core-devel
 BuildRequires:	gettext-devel
@@ -56,3 +56,4 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/dbus-1/interfaces/org.kde.kdnssd.xml
 %{_datadir}/kservices5/kded/dnssdwatcher.desktop
 %{_datadir}/remoteview/zeroconf.desktop
+%{_datadir}/metainfo/org.kde.zeroconf-ioslave.metainfo.xml
