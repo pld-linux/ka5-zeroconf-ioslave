@@ -6,7 +6,7 @@ Summary:	zeroconf ioslave
 Summary(pl.UTF-8):	zeroconf ioslave
 Name:		ka5-%{kaname}
 Version:	21.04.2
-Release:	1
+Release:	2
 License:	GPL v2+
 Group:		X11/Libraries
 Source0:	http://download.kde.org/stable/release-service/%{kdeappsver}/src/%{kaname}-%{version}.tar.xz
