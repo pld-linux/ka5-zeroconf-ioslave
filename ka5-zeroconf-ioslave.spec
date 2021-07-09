@@ -1,16 +1,16 @@
-%define		kdeappsver	21.04.2
+%define		kdeappsver	21.04.3
 %define		kframever	5.56.0
 %define		qtver		5.9.0
 %define		kaname		zeroconf-ioslave
 Summary:	zeroconf ioslave
 Summary(pl.UTF-8):	zeroconf ioslave
 Name:		ka5-%{kaname}
-Version:	21.04.2
-Release:	2
+Version:	21.04.3
+Release:	1
 License:	GPL v2+
 Group:		X11/Libraries
 Source0:	http://download.kde.org/stable/release-service/%{kdeappsver}/src/%{kaname}-%{version}.tar.xz
-# Source0-md5:	2bef1029bfc95972a3dc76c178634ded
+# Source0-md5:	b495804ec7d6a6ae59ee8854e69fd0ed
 URL:		http://www.kde.org/
 BuildRequires:	Qt5Core-devel
 BuildRequires:	gettext-devel
